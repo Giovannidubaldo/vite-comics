@@ -59,6 +59,7 @@ export default {
     }
 }
 </script>
+
 <template lang="">
     <header>
         <div class="container">
@@ -77,6 +78,7 @@ export default {
         </div>
     </header>
 </template>
+
 <style lang="scss">
 @use '../styles/partials/variables' as *;
 
