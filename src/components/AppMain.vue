@@ -87,7 +87,12 @@ export default {
     <main>
         <div class="container">
             <div class="row">
-                <h2>Content go here</h2>
+                <div class="list-unstyled d-flex flex-wrap">
+                    <div class="album-film" v-for="(film,index) in films" :key="index">
+                        <img :src="film.thumb" alt="">
+                        <h6 class="text-uppercase mt-3">{{film.series}}</h6>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
@@ -100,6 +105,11 @@ export default {
 main {
     padding: 20px 0;
     background-color: #000;
-    color: $color_white
+    color: $color_white;
+
+    .album-film {
+        width: calc(100% / 6 - 20px);
+        margin: 10px;
+    }
 }
 </style>
