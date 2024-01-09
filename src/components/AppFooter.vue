@@ -6,6 +6,8 @@ export default {
 
 <template lang="">
     <footer>
+
+        <!-- Top Footer -->
         <div class="top-footer">
             <div class="container">
                 <div class="footer-logo-dc d-flex">
@@ -29,9 +31,37 @@ export default {
                             <li>Shop DC collectibles</li>
                         </ul>
                     </div>
+                    <div class="menu ms-5">
+                        <h3 class="text-uppercase">dc</h3>
+                        <ul class="list-unstyled">
+                            <li>Terms Of Use</li>
+                            <li>Privacy Police</li>
+                            <li>Ad Choices</li>
+                            <li>Advertising</li>
+                            <li>Jobs</li>
+                            <li>Jobs</li>
+                            <li>Jobs</li>
+                            <li>Jobs</li>
+                            <li>Jobs</li>
+                            <li>Jobs</li>
+                            <li>Jobs</li>
+                        </ul>
+                    </div>
+                    <div class="menu ms-5">
+                        <h3 class="text-uppercase">sites</h3>
+                        <ul class="list-unstyled">
+                            <li>DC</li>
+                            <li>MAD Magazine</li>
+                            <li>DC Kids</li>
+                            <li>DC Universe</li>
+                            <li>DC Power Visa</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
+
+        <!-- Bottom footer -->
         <div class="bottom-footer">
             ciao
         </div>

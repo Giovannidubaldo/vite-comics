@@ -90,21 +90,34 @@ export default {
 
 <template lang="">
     <main>
+        <!-- Jumbotron -->
+        <div class="jumbotron">  
+        </div>
+
+        <!-- Top main  -->
         <div class="top-main">
             <div class="container">
                 <div class="row">
+
+                    <!-- Lista fumetti -->
                     <div class="list-unstyled d-flex flex-wrap">
                         <AlbumFilm v-for="(film,index) in films" :key="index" :films="film"/>
                     </div>
+
+                    <!-- Bottone -->
                     <div class="buttons d-flex justify-content-center mt-5">
                         <button>Load More</button>
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- Bottom main -->
         <div class="bottom-main">
             <div class="container">
                 <div class="row">
+
+                    <!-- Lista link -->
                     <ul class="list-unstyled d-flex justify-content-center align-items-center">
                         <li>
                             <img src="../assets/img/buy-comics-digital-comics.png" alt="">
@@ -140,9 +153,14 @@ export default {
 main {
     color: $color_white;
 
+    .jumbotron {
+        background-image: url('../assets/img/jumbotron.jpg');
+        height: 300px;
+    }
+
     .top-main {
         background-color: #000;
-        padding: 20px 0;
+        padding: 30px 0;
 
         button {
             background-color: $color_blue;
