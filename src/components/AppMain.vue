@@ -90,13 +90,43 @@ export default {
 
 <template lang="">
     <main>
-        <div class="container">
-            <div class="row">
-                <div class="list-unstyled d-flex flex-wrap">
-                    <AlbumFilm v-for="(film,index) in films" :key="index" :films="film"/>
+        <div class="top-main">
+            <div class="container">
+                <div class="row">
+                    <div class="list-unstyled d-flex flex-wrap">
+                        <AlbumFilm v-for="(film,index) in films" :key="index" :films="film"/>
+                    </div>
+                    <div class="buttons d-flex justify-content-center mt-5">
+                        <button>Load More</button>
+                    </div>
                 </div>
-                <div class="buttons d-flex justify-content-center mt-5">
-                    <button>Load More</button>
+            </div>
+        </div>
+        <div class="bottom-main">
+            <div class="container">
+                <div class="row">
+                    <ul class="list-unstyled d-flex justify-content-center align-items-center">
+                        <li>
+                            <img src="../assets/img/buy-comics-digital-comics.png" alt="">
+                            <a href="#">digital comics</a>
+                        </li>
+                        <li>
+                            <img src="../assets/img/buy-comics-merchandise.png" alt="">
+                            <a href="#">dc merchandising</a>
+                        </li>
+                        <li>
+                            <img src="../assets/img/buy-comics-subscriptions.png" alt="">
+                            <a href="#">subscription</a>
+                        </li>
+                        <li>
+                            <img src="../assets/img/buy-comics-shop-locator.png" alt="">
+                            <a href="#">comic shop locator</a>
+                        </li>
+                        <li>
+                            <img src="../assets/img/buy-dc-power-visa.svg" alt="">
+                            <a href="#">dc power visa</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -108,15 +138,43 @@ export default {
 @use '../styles/partials/variables' as *;
 
 main {
-    padding: 20px 0;
-    background-color: #000;
     color: $color_white;
 
-    button {
-        background-color: $color_blue;
-        color: $color_white;
-        border-style: none;
-        width: 200px;
+    .top-main {
+        background-color: #000;
+        padding: 20px 0;
+
+        button {
+            background-color: $color_blue;
+            color: $color_white;
+            border-style: none;
+            width: 200px;
+        }
     }
+
+    .bottom-main {
+        background-color: $color_blue;
+        padding: 30px 0;
+
+        li {
+            margin: 10px;
+            text-transform: uppercase;
+
+            img {
+                width: 50px;
+            }
+
+            a {
+                color: $color_white;
+                margin: 10px;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
 }
 </style>
