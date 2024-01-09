@@ -1,6 +1,11 @@
 <script>
+import AlbumFilm from './AlbumFilm.vue';
+
 export default {
     name: 'AppMain',
+    components: {
+        AlbumFilm,
+    },
     data() {
         return {
             films: [
@@ -88,10 +93,10 @@ export default {
         <div class="container">
             <div class="row">
                 <div class="list-unstyled d-flex flex-wrap">
-                    <div class="album-film" v-for="(film,index) in films" :key="index">
-                        <img :src="film.thumb" alt="">
-                        <h6 class="text-uppercase mt-3">{{film.series}}</h6>
-                    </div>
+                    <AlbumFilm v-for="(film,index) in films" :key="index" :films="film"/>
+                </div>
+                <div class="buttons d-flex justify-content-center mt-5">
+                    <button>Load More</button>
                 </div>
             </div>
         </div>
@@ -107,9 +112,11 @@ main {
     background-color: #000;
     color: $color_white;
 
-    .album-film {
-        width: calc(100% / 6 - 20px);
-        margin: 10px;
+    button {
+        background-color: $color_blue;
+        color: $color_white;
+        border-style: none;
+        width: 200px;
     }
 }
 </style>
