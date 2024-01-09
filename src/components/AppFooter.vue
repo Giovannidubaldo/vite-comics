@@ -63,7 +63,14 @@ export default {
 
         <!-- Bottom footer -->
         <div class="bottom-footer">
-            ciao
+            <div class="container">
+                <div class="row">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <button>sign-up now!</button>
+                        <a href="#">follow us</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
 </template>
@@ -101,5 +108,20 @@ export default {
 
 .bottom-footer {
     background-color: rgb(77, 77, 77);
+    padding: 30px 0;
+
+    button {
+        text-transform: uppercase;
+        padding: 10px;
+        color: $color_white;
+        background-color: rgb(77, 77, 77);
+        border: 1px solid $color_blue;
+    }
+
+    a {
+        text-transform: uppercase;
+        text-decoration: none;
+        color: $color_blue;
+    }
 }
 </style>
